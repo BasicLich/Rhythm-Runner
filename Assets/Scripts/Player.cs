@@ -103,11 +103,11 @@ public class Player : MonoBehaviour {
         anim.SetTrigger("GameWon");
         float length = endClip.length;
         yield return new WaitForSeconds(length);
-        float endscore = Mathf.Round((gm.startbeatTempo - (gm.totalMissedNotes / (gm.playSpeed / 4))) * 100);
+        float endscore = Mathf.Round((gm.currentbeatTempo - (gm.totalMissedNotes / (gm.playSpeed / 4))) * 100);
         if (endscore < 0) {
             endscore = 0f;
         }
-        float maxscore = Mathf.Round(gm.startbeatTempo * 100);
+        float maxscore = Mathf.Round(gm.currentbeatTempo * 100);
         gm.scoreText.text = "Score: " + endscore.ToString() + " / " + maxscore.ToString();
         if (endscore > PlayerPrefs.GetFloat(gm.currentSong.src.name, 0)) {
             PlayerPrefs.SetFloat(gm.currentSong.src.name, endscore);

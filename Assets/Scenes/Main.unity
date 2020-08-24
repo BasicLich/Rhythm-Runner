@@ -1171,12 +1171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8a8dfe8372a1aa4e904884da6e9e66b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notes:
-  - {fileID: 4101572701891496824, guid: bf1b64fb341b4394e9a5f90b027688a7, type: 3}
-  - {fileID: 3318635231415709075, guid: 42dd3afc668f4fe47addf638fb74c68e, type: 3}
-  - {fileID: 1370720779917333208, guid: f04c2e4ca99b4634a92da1a3ee75b0f9, type: 3}
-  - {fileID: 428571057491031959, guid: 8a8d83299e3707f44a8ad02dd3379d25, type: 3}
-  - {fileID: 8926100619566400449, guid: e17c2fd54c42c2242b5875438d1a52a6, type: 3}
 --- !u!1 &141562762
 GameObject:
   m_ObjectHideFlags: 0
@@ -3800,17 +3794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75e59d06badedaa4b9282423bcc86640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacles:
-  - {fileID: 772053586710108811, guid: fee0c84159bec16419292bbdb442a1f5, type: 3}
-  - {fileID: 3462990035287486896, guid: 4e013c0a1b686d94abda4d47b9ecc1b9, type: 3}
-  - {fileID: 6800537920013225577, guid: 046786c0f6aff384380d4764a72e45a7, type: 3}
-  - {fileID: 5492014371886864538, guid: 13c09e24a2b808e44b181e49ead95c00, type: 3}
-  - {fileID: 5102402892693044646, guid: daa647cebc054094f895b944bc312bdd, type: 3}
-  - {fileID: 3243130034173602632, guid: 5dc9cac8ea4b9b545b28d6124a0dea36, type: 3}
-  - {fileID: 1103277721971186742, guid: 47f0c2862d48ccc40a1f7166f86e42c1, type: 3}
-  - {fileID: 9132162175566155888, guid: 1cd7f8ac766aa8a46ab28d9ffee3a341, type: 3}
-  - {fileID: 5391267810319610940, guid: 531d8f726483dc5469211c4144216c6d, type: 3}
-  - {fileID: 4559123412412275479, guid: e188b18c5c83eb042b3eef7149753950, type: 3}
 --- !u!4 &704241416
 Transform:
   m_ObjectHideFlags: 0
@@ -10279,20 +10262,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b810776ecd4767341885a35e7cab3726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colors:
-  - {r: 0.011764707, g: 0.6627451, b: 0.9568628, a: 1}
-  - {r: 0.9607844, g: 0.6313726, b: 0.17254902, a: 1}
-  - {r: 0.85098046, g: 0.2901961, b: 0.32156864, a: 1}
-  - {r: 0.54509807, g: 0.76470596, b: 0.2901961, a: 1}
-  - {r: 0.5647059, g: 0.79215693, b: 0.97647065, a: 1}
-  - {r: 1, g: 1, b: 0, a: 1}
-  - {r: 0.46274513, g: 1, b: 0.011764707, a: 1}
-  - {r: 0.87843144, g: 0.2509804, b: 0.9843138, a: 1}
-  - {r: 0.007843138, g: 0.4666667, b: 0.7411765, a: 1}
   obstacleScroller: {fileID: 704241414}
   goal: {fileID: 4145200601196728396, guid: c8a9d6fe6c93b8d4689d27de38ed624f, type: 3}
   lifeText: {fileID: 470698453}
   dropdown: {fileID: 25303283}
+  notes:
+  - {fileID: 4101572701891496824, guid: 0a4fd22d0f7079a4daa95e29c88b720f, type: 3}
+  - {fileID: 4101572701891496824, guid: bf1b64fb341b4394e9a5f90b027688a7, type: 3}
+  - {fileID: 3318635231415709075, guid: 1a9227e945660dc4bbc533f96a5ba202, type: 3}
+  - {fileID: 3318635231415709075, guid: 42dd3afc668f4fe47addf638fb74c68e, type: 3}
+  - {fileID: 1370720779917333208, guid: 067c7c44408f91840bbfd26c70e932e3, type: 3}
+  - {fileID: 1370720779917333208, guid: f04c2e4ca99b4634a92da1a3ee75b0f9, type: 3}
+  - {fileID: 8926100619566400449, guid: e17c2fd54c42c2242b5875438d1a52a6, type: 3}
+  - {fileID: 8926100619566400449, guid: 2995a0e88b007b2499edc073e3a5eb90, type: 3}
+  - {fileID: 428571057491031959, guid: 8a8d83299e3707f44a8ad02dd3379d25, type: 3}
+  obstacles:
+  - {fileID: 772053586710108811, guid: fee0c84159bec16419292bbdb442a1f5, type: 3}
+  - {fileID: 5391267810319610940, guid: 531d8f726483dc5469211c4144216c6d, type: 3}
+  - {fileID: 4559123412412275479, guid: e188b18c5c83eb042b3eef7149753950, type: 3}
+  - {fileID: 1103277721971186742, guid: 47f0c2862d48ccc40a1f7166f86e42c1, type: 3}
+  - {fileID: 3462990035287486896, guid: 4e013c0a1b686d94abda4d47b9ecc1b9, type: 3}
+  - {fileID: 6800537920013225577, guid: 046786c0f6aff384380d4764a72e45a7, type: 3}
+  - {fileID: 3243130034173602632, guid: 5dc9cac8ea4b9b545b28d6124a0dea36, type: 3}
+  - {fileID: 5102402892693044646, guid: daa647cebc054094f895b944bc312bdd, type: 3}
+  - {fileID: 5492014371886864538, guid: 13c09e24a2b808e44b181e49ead95c00, type: 3}
+  indexForObstacles: 0
   dropOptions: []
   medal:
   - {fileID: 1283493035}
@@ -10310,7 +10304,6 @@ MonoBehaviour:
   missedNotes: 0
   life: 4
   invincibility: 0
-  index: 0
   songs:
   - beatTempo: 152
     src: {fileID: 791481230}
@@ -10359,10 +10352,9 @@ MonoBehaviour:
   canvas3: {fileID: 907129267}
   canvas4: {fileID: 1815862088}
   spawnRate: 4
-  playSpeed: 30
+  playSpeed: 60
   currentColor: {r: 0.011764707, g: 0.6627451, b: 0.9568628, a: 1}
   currentbeatTempo: 120
-  startbeatTempo: 0
   startPlaying: 0
   gameFinished: 0
   playerHit: 0

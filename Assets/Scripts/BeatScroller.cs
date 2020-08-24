@@ -4,7 +4,6 @@ using System.Security.Cryptography;
 using UnityEngine;
 
 public class BeatScroller : MonoBehaviour {
-    [SerializeField] private GameObject[] notes;
 
     private GameManager gm;
     private Coroutine coroutine;
@@ -20,9 +19,7 @@ public class BeatScroller : MonoBehaviour {
     }
 
     private void GenerateNote() {
-        int index = Random.Range(0, notes.Length);
-        GameObject random = notes[index];
-        random.GetComponent<ButtonController>().ChangeColor(gm.currentColor);
+        GameObject random = gm.notes[gm.indexForObstacles];
         Instantiate(random, transform.position, Quaternion.identity);
     }
 
@@ -32,7 +29,6 @@ public class BeatScroller : MonoBehaviour {
         }
         GenerateNote();
         yield return new WaitForSeconds(gm.spawnRate / gm.currentbeatTempo);
-        gm.SetNewColor();
         coroutine = null;
     }
 }

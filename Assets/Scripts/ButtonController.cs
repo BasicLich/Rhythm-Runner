@@ -51,9 +51,4 @@ public class ButtonController : MonoBehaviour
         }
         transform.position -= new Vector3(gm.currentbeatTempo * Time.deltaTime, 0f, 0f);
     }
-
-    public void ChangeColor(Color color)
-    {
-        sr.color = color;
-    }
 }

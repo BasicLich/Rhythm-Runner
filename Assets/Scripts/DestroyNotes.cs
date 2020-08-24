@@ -15,6 +15,7 @@ public class DestroyNotes : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if (collision.CompareTag("Note")) {
+            gm.GetRandomIndex();
             btn = collision.GetComponent<ButtonController>();
             if (btn.sr.sprite != btn.pressedImage) {
                 gm.LoosePoints();

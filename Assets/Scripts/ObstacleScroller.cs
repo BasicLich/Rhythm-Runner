@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 public class ObstacleScroller : MonoBehaviour {
-    [SerializeField] private GameObject[] obstacles;
 
     private GameManager gm;
     private Coroutine coroutine;
@@ -20,8 +19,7 @@ public class ObstacleScroller : MonoBehaviour {
     }
 
     private void GenerateObstacle() {
-        int index = Random.Range(0, obstacles.Length);
-        GameObject random = obstacles[index];
+        GameObject random = gm.obstacles[gm.indexForObstacles];
         Vector3 pos = transform.position;
         if (random.CompareTag("Grass")) {
             pos -= new Vector3(0f, 0.12f, 0f);

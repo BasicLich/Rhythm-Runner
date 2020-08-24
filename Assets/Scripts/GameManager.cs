@@ -32,11 +32,20 @@ public class GameManager : MonoBehaviour {
     }
     #endregion
 
-    [SerializeField] private Color[] colors;
     [SerializeField] private GameObject obstacleScroller;
     [SerializeField] private GameObject goal;
     [SerializeField] private Text lifeText;
     [SerializeField] private Dropdown dropdown;
+
+    #region Generation Arrays
+    public GameObject[] notes;
+    public GameObject[] obstacles;
+    public int indexForObstacles = 0;
+
+    public void GetRandomIndex() {
+        indexForObstacles = UnityEngine.Random.Range(0, notes.Length);
+    }
+    #endregion
 
     public List<string> dropOptions = new List<string>();
 
@@ -67,7 +76,6 @@ public class GameManager : MonoBehaviour {
 
     public Color currentColor;
     public float currentbeatTempo;
-    public float startbeatTempo;
     public bool startPlaying;
     public bool gameFinished;
     public bool playerHit;
@@ -89,8 +97,7 @@ public class GameManager : MonoBehaviour {
                 // Get the current index of the dropDown
                 index = dropdown.value;
                 currentbeatTempo = songs[index].beatTempo;
-                currentbeatTempo /= playSpeed;
-                startbeatTempo = currentbeatTempo;
+                currentbeatTempo /= 60f;
                 currentSong = songs[index];
                 songs[index].src.Play();
                 startPlaying = true;
@@ -103,16 +110,7 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    public void SetNewColor() {
-        int index = UnityEngine.Random.Range(0, colors.Length);
-        currentColor = colors[index];
-    }
-
     public void LoosePoints() {
-        currentbeatTempo -= 0.2f;
-        if (currentbeatTempo <= 0f) {
-            currentbeatTempo += 0.4f;
-        }
         rate += 25f / 1000f;
         pitch -= 12f / 1000f;
         // Add Missed Note Points
@@ -125,7 +123,6 @@ public class GameManager : MonoBehaviour {
     }
 
     public void GetPoints() {
-        currentbeatTempo += 0.05f;
         if (rate > 0f) { rate -= 12.5f / 1000f; }
         if (pitch < 1f) { pitch += 6.25f / 1000f; }
     }
